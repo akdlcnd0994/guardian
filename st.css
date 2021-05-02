@@ -17,6 +17,11 @@
     margin-top:50px;
     font-size:20px;
 }
+.box_input2 {
+    display: flex;
+    margin-top: 50px;
+    font-size: 20px;
+}
 
 .test{
     display:flex;
@@ -43,7 +48,7 @@
 
 .submit{
     margin-left:50px;
-    width:200px;
+    width:300px;
     font-weight:600;
     font-size:20px;
 }
