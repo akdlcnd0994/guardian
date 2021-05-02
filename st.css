@@ -1,0 +1,49 @@
+﻿body {
+    font-family: "Noto Sans KR", sans-serif;
+    display: flex;
+    justify-content: space-between;
+}
+
+.box {
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+
+}
+
+.box_input{
+    display:block;
+    margin-top:50px;
+    font-size:20px;
+}
+
+.test{
+    display:flex;
+    margin:50px 0 50px 0;
+
+}
+
+
+.box img{
+    width: 500px;
+    height: 850px;
+}
+
+.btn:focus::-webkit-input-placeholder {
+    opacity: 0;
+    -webkit-transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.btn::placeholder {
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    text-align: center;
+}
+
+.submit{
+    margin-left:50px;
+    width:200px;
+    font-weight:600;
+    font-size:20px;
+}
