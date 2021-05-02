@@ -1,10 +1,12 @@
 // JavaScript source code
 const input = document.querySelector(".box_input"),
+input2 = document.querySelector(".box_input2"),
 text1 = document.querySelector(".text1");
 text2 = document.querySelector(".text2");
 var arr = ['K', 'M', 'B', 'T', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
-
+var c = 0;
 function handleSubmit(event) {
+    c = 0;
     event.preventDefault();
     var t1 = acc(text1.value);
     var t2 = acc(text2.value);
@@ -19,6 +21,21 @@ function handleSubmit(event) {
     alert(time[0] + " day " + time[1] + " hour " + time[2] + " minute " + time[3] + " second \n예상 완료시간은"+today.toLocaleString()+"입니다.");
 }
 
+function handleSubmit2(event) {
+    c = 1;
+    event.preventDefault();
+    var t1 = acc(text1.value);
+    var t2 = acc(text2.value);
+    var temp = re(t1, t2);
+    var time = slice(temp);
+    let today = new Date();
+    today.setHours(today.getHours() + time[1]);
+    today.setDate(today.getDate() + time[0]);
+    today.setMinutes(today.getMinutes() + time[2]);
+    today.setSeconds(today.getSeconds() + time[3]);
+
+    alert(time[0] + " day " + time[1] + " hour " + time[2] + " minute " + time[3] + " second \n예상 완료시간은" + today.toLocaleString() + "입니다.");
+}
 function slice(time) {
     var day, hour, min, sec;
     day = parseInt(time / 86400)
@@ -40,7 +57,9 @@ function re(arr1, arr2) {
     }
   
     while (true) {
-        value+=now*60
+        if (c == 1) {
+            value += now * 60
+        }
 
         for (var i = 1; i <= 240; i++) {
             if (i%120 == 0) {
@@ -122,6 +141,7 @@ function acc(text) {
 
 function init() {
     input.addEventListener("submit", handleSubmit);
+    input2.addEventListener("submit", handleSubmit2);
 }
 
 
