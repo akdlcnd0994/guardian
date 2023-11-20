@@ -5,3 +5,8 @@
 
 ##### 스크린샷(인게임 광고를 볼 경우 시간이 단축되기에 다른 로직을 적용하여 계산)
 ![image](https://github.com/akdlcnd0994/guardian/assets/28687142/4569d7a0-4c22-49e1-8142-050f1b60d39d)
+
+
+##### ex)
+
+![image](https://github.com/akdlcnd0994/guardian/assets/28687142/0f882451-7e79-4aca-89fc-cc6bce2de5da)
